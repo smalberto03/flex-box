@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercio usando display flex hola</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Funcionamiento del display flex</h1>
+        <div id="divPrincipal"><!--CONTENEDOR-->
+            <div id="item1"><img src="marca.png"></div><!--ITEM-->
+            <div id="item2">BALONCESTOn</div><!--ITEM-->
+            <div id="item3">FUTBOL</div><!--ITEM-->
+            <div id="item4">F1</div><!--ITEM-->
+        </div>
+        <br>
+        <button onclick="anadirDiv()">Anadir al carrito</button>
+        <button onclick="borrarDiv()">Quitar del carrito</button></br>
+        <hr>
+        <h2>Noticias destacadas</h2>
+        <div id="noticias">
+            <div id="resultado">
+                <img src="resultado.png"><br>
+                Real Madrid 1 - 3 FC Barcelona.<br>
+                Este fue el resultado del clásico que enfrento a esto equipos para la final
+                de la supercopa de españa<br>
+            </div>
+            <div id="flex-container">
+                <div>
+                    El Atletico de Madrid ofrece una cesión de 20 millones por Joao Felix al Chelsea<br><br>
+                    <img src="joao.png">
+                </div>
+                <div>
+                    Cristiano Ronaldo ficha por el Al Nassr por 250 millones al año<br><br>
+                    <img src="ronaldo.jpg">
+                </div>
+                <div>
+                    La rueda de prensa de Xavi antes de enfrentarse al Ceuta en la Copa Del Rey<br><br>
+                    <img src="xavi.jpg">
+                </div>
+                <div>
+                    Pendientes al partidazo que enfrentará al Real Madrid vs Villareal mañana a las 21:00<br><br>
+                    <img src="copa.jpg">
+                </div>
+            </div>
+        </div>   
+    </body>
+    <script>
+
+        let divPrincipal = document.getElementsByTagName('div')[0]
+
+        function anadirDiv()
+        {
+            console.log('Has pulsado el born de añadir un elemento al carrito')
+            let divNuevo = document.createElement('div')
+            divNuevo.setAttribute('id', 'divNuevo')
+            divPrincipal.appendChild(divNuevo)
+        }
+
+        function borrarDiv()
+        {
+            console.log('Has pulsado el born de añadir un elemento al carrito')
+            divNuevo.style.display = 'none'
+        }
+    </script>
+</html>
